@@ -1,0 +1,14 @@
+
+21/10/2015 01:58:05 flask_web.py [line:60] ERROR error
+Traceback (most recent call last):
+  File "flask_web.py", line 58, in index2
+    return render_template('index.htm', images=getImage())
+  File "flask_web.py", line 22, in getImage
+    images.append(getNodePic('pos_machine'))
+  File "/opt/oracle/apache/htdocs/panoramic/main/pic.py", line 10, in getNodePic
+    data.extend(getQueueData(node,'T'))
+  File "/opt/oracle/apache/htdocs/panoramic/main/data.py", line 227, in getQueueData
+    log = getQueueLog(unit)
+  File "/opt/oracle/apache/htdocs/panoramic/main/log.py", line 175, in getQueueLog
+    with open('/nfs/monitor_cps/tibco/data/' + unit + '-tibco.data') as f:
+IOError: [Errno 2] No such file or directory: '/nfs/monitor_cps/tibco/data/T-tibco.data'
